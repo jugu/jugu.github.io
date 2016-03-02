@@ -1,16 +1,15 @@
-<div>
+<div width="100%">
 	<b> Jugu Dannie Sundar </b>
-	<div style='background-color:lightblue'>Status</div>
+	<div style='background-color:lightblue;font-weight:bold'>Status</div>
 	<div>
 		<p>
-			I am first year master's student (joined Fall 2015) at <a href="http://www.stonybrook.edu/">Stony Brook University </a> enrolled in the <a href="https://www.cs.stonybrook.edu/">Computer Science</a> program.
+			I am a first year master's student (joined Fall 2015) at <a href="http://www.stonybrook.edu/">Stony Brook University </a> enrolled in the <a href="https://www.cs.stonybrook.edu/">Computer Science</a> program. I have 6 years of software product development experience using Java/J2EE based web technologies.
 		</p>
 		<p>
 			I am actively looking for internship in Summer 2016
 		</p>
-	</div>	
-	
-	<div style='background-color:lightblue'>Skills</div>	
+	</div>		
+	<div style='background-color:lightblue;font-weight:bold'>Skills</div>	
 	<div id="skill" align='center'>
 		<script>
 			var margin = {top: 20, right: 20, bottom: 100, left: 100},
@@ -37,8 +36,7 @@
 				.attr("height", height + margin.top + margin.bottom)
 				.append("g")
 				.attr("transform", 
-					  "translate(" + margin.left + "," + margin.top + ")");
-
+					  "translate(" + margin.left + "," + margin.top + ")");			
 			d3.csv("data/skills.csv", function(error, data) {
 				
 			  x.domain(data.map(function(d) { return d.technology; }));
@@ -87,16 +85,11 @@
 			});
 		</script>
 	</div>	
-	
-	<div style='background-color:lightblue'>Social networks</div>
-	<div>
-		<div style='float:left;width:50%' align='middle'>
-			<!-- Facebook Badge START --><a href="https://www.facebook.com/Jugu.Dannie" title="Jugu Dannie Sundar" style="font-family: &quot;lucida grande&quot;,tahoma,verdana,arial,sans-serif; font-size: 11px; font-variant: normal; font-style: normal; font-weight: normal; color: #3B5998; text-decoration: none;" target="_TOP">Jugu Dannie Sundar</a><br /><a href="https://www.facebook.com/Jugu.Dannie" title="Jugu Dannie Sundar" target="_TOP"><img class="img" src="https://badge.facebook.com/badge/500689165.9298.819076048.png" style="border: 0px;" alt="" /></a><br /><!-- Facebook Badge END -->						
-		</div>		
-		<div style='float:left'>
-			<a href="https://www.linkedin.com/pub/jugu-dannie-sundar/15/b69/932">
-			<img src="https://static.licdn.com/scds/common/u/img/webpromo/btn_liprofile_blue_80x15.png" width="80" height="15" border="0" alt="View Jugu Dannie Sundar's profile on LinkedIn">        
-			</a>
-		</div>				
+	<div style="background-color:lightblue;font-weight:bold">
+		Knows about
 	</div>
+	<p>Retail Workforce Management software, Product Development, Requirement Analysis, Technical Specification, Development Estimates,
+	   Implementation, Quality Assurance Testing, Full Stack Development, Agile Technologies
+	</p>
+	
 </div>
