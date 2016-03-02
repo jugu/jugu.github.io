@@ -1,12 +1,74 @@
 <?DOCTYPE html>
 <html>
 	<head>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/jugu.css"/>
 		<title>
 			Jugu Danne Sundar's Page
 		</title>
 	</head>
-	<body>
-		<h1>Jugu Dannie Sundar</h1>
-		
+	<body>				
+		<div class="container" ng-app="app" ng-controller="controller">
+			<nav class="navbar navbar-inverse navbar-fixed-top">
+				<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>                        
+					</button>
+					<span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+				    <!--<a class="navbar-brand" href="#">&nbsp;</a>-->
+				</div>
+				<div class="collapse navbar-collapse" id="myNavbar">
+					<ul class="nav navbar-nav">
+						<li ng-repeat="x in headings.headings"><a href="#" ng-click="myFunction(x.source)">{{x.name}}</a></li>
+					</ul>
+				</div>
+			</nav>	
+			<div class="row">
+				<div class="col-sm-12" ng-bind-html="content" id="contentdiv">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-12" style='height:1500px" style='background-color:green'>&nbsp;					
+				</div>
+			</div>
+		</div>
+		<script type = 'text/javascript' src="scripts/jquery-1.11.3.min.js"></script>
+		<script type = 'text/javascript' src="scripts/bootstrap.min.js"></script>	
+		<script type = 'text/javascript' src="scripts/angular.min.js"></script>					
+		<script type = 'text/javascript' src="scripts/angular-sanitize.min.js"></script>	
+		<script type = 'text/javascript' src="scripts/d3.min.js"></script>		
+		<script type = 'text/javascript' src="scripts/jugu.js"></script>					
+		<script>
+			var app = angular.module('app', ['ngSanitize']);
+			app.controller('controller', function ($scope, $http) {
+				$scope.myFunction = function(source) {
+					$http.get(source)
+						.success(function(data) {
+							$("#contentdiv").html(data);
+							//$scope.content = data;							
+						})
+						.error(function(data,status,error,config){
+							$scope.error = [{heading:"Error",description:"Could not load headings"}];
+						});
+				}
+				$http.get('data/headings.json')
+						.success(function(data) {
+							$scope.headings=data;
+						})
+						.error(function(data,status,error,config){
+							$scope.error = [{heading:"Error",description:"Could not load headings"}];
+						});
+			$scope.myFunction("aboutme.html")				
+			});
+			
+			$(document).on('click','.navbar-collapse.in',function(e) {
+				if( $(e.target).is('a') && $(e.target).attr('class') != 'dropdown-toggle' ) {
+					$(this).collapse('hide');
+				}
+			});			
+		</script>
 	</body>
 </html>

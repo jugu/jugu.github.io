@@ -1,0 +1,101 @@
+<div>
+	<div style='background-color:lightblue'>Status</div>
+	<div>
+		<p>
+			I am first year master's student (joined Fall 2015) at <a href="http://www.stonybrook.edu/">Stony Brook University </a> enrolled in the <a href="https://www.cs.stonybrook.edu/">Computer Science</a> program.
+		</p>
+		<p>
+			I am actively looking for internship in Summer 2016
+		</p>
+	</div>	
+	
+	<div style='background-color:lightblue'>Skills</div>	
+	<div id="skill" align='center'>
+		<script>
+			var margin = {top: 20, right: 20, bottom: 100, left: 100},
+			width = 600 - margin.left - margin.right,
+			height = 350 - margin.top - margin.bottom;			
+
+			var x = d3.scale.ordinal().rangeRoundBands([0, width], .05);
+			
+			var color = d3.scale.category20();
+
+			var y = d3.scale.linear().range([height, 0]);
+
+			var xAxis = d3.svg.axis()
+				.scale(x)
+				.orient("bottom")				
+
+			var yAxis = d3.svg.axis()
+				.scale(y)
+				.orient("left")
+				.ticks(10);
+
+			var svg = d3.select("#skill").append("svg")
+				.attr("width", width + margin.left + margin.right)
+				.attr("height", height + margin.top + margin.bottom)
+			  .append("g")
+				.attr("transform", 
+					  "translate(" + margin.left + "," + margin.top + ")");
+
+			d3.csv("data/skills.csv", function(error, data) {
+				
+			  x.domain(data.map(function(d) { return d.technology; }));
+			  y.domain([0, 10]);
+
+			  svg.append("g")
+				  .attr("class", "x axis")
+				  .attr("transform", "translate(0," + height + ")")
+				  .call(xAxis)
+				.selectAll("text")
+				  .style("text-anchor", "end")
+				  .attr("dx", "-.8em")
+				  .attr("dy", "-.55em")
+				  .attr("transform", "rotate(-90)" );
+
+			  svg.append("g")
+				  .attr("class", "y axis")
+				  .call(yAxis)
+				.append("text")
+				  .attr("transform", "rotate(-90)")
+				  .attr("y", -50)
+				  .attr("dy", ".71em")
+				  .style("text-anchor", "end")
+				  .text("Skill Rating");
+
+			  svg.selectAll("bar")
+				  .data(data)
+				  .enter().append("rect")
+				  .attr("class", "bar")
+				  .style("fill", function (d) { return color(d.number)})
+				  .attr("x", function(d) { return x(d.technology); })
+				  .attr("width", x.rangeBand())
+				  .attr("y", function(d) { return y(d.skill); })
+				  .attr("height", function(d) { return height - y(d.skill); })
+				  .on("mouseover", function(d, i) {								
+						svg.append("text")
+						.attr("id", "tooltip")
+						.text(d.skill)
+						.attr("x", function () {								
+								return x(d.technology)+20; })
+						.attr("y", function () { return  y(d.skill)-25 })
+					 })
+				  .on("mouseout", function(d) {					
+					d3.select("#tooltip").remove();
+					});						
+			});
+		</script>
+	</div>	
+	
+	<div style='background-color:lightblue'>Social networks</div>
+	<div>
+		<div style='float:left;width:50%' align='middle'>
+			<!-- Facebook Badge START --><a href="https://www.facebook.com/Jugu.Dannie" title="Jugu Dannie Sundar" style="font-family: &quot;lucida grande&quot;,tahoma,verdana,arial,sans-serif; font-size: 11px; font-variant: normal; font-style: normal; font-weight: normal; color: #3B5998; text-decoration: none;" target="_TOP">Jugu Dannie Sundar</a><br /><a href="https://www.facebook.com/Jugu.Dannie" title="Jugu Dannie Sundar" target="_TOP"><img class="img" src="https://badge.facebook.com/badge/500689165.9298.819076048.png" style="border: 0px;" alt="" /></a><br /><!-- Facebook Badge END -->						
+		</div>		
+		<div style='float:left'>
+			<a href="https://www.linkedin.com/pub/jugu-dannie-sundar/15/b69/932">
+			<img src="https://static.licdn.com/scds/common/u/img/webpromo/btn_liprofile_blue_80x15.png" width="80" height="15" border="0" alt="View Jugu Dannie Sundar's profile on LinkedIn">        
+			</a>
+		</div>				
+	</div>
+</div>
