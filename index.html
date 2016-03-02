@@ -22,16 +22,12 @@
 				</div>
 				<div class="collapse navbar-collapse" id="myNavbar">
 					<ul class="nav navbar-nav">
-						<li ng-repeat="x in headings.headings"><a href="#" ng-click="myFunction(x.source)">{{x.name}}</a></li>
+						<li ng-repeat="x in headings.headings" ng-class="{'active': x.name == activeItem}"><a href="#" ng-click="myFunction(x.name, x.source)">{{x.name}}</a></li>
 					</ul>
 				</div>
 			</nav>	
 			<div class="row">
 				<div class="col-sm-12" ng-bind-html="content" id="contentdiv">
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-sm-12" style='height:1500px" style='background-color:green'>&nbsp;					
 				</div>
 			</div>
 		</div>
@@ -43,17 +39,19 @@
 		<script type = 'text/javascript' src="scripts/jugu.js"></script>					
 		<script>
 			var app = angular.module('app', ['ngSanitize']);
-			app.controller('controller', function ($scope, $http) {
-				$scope.myFunction = function(source) {
+			app.controller('controller', function ($scope, $http) {				
+				$scope.activeItem = "About Me";				
+				$scope.myFunction = function(name, source) {								
+					$scope.activeItem = name;					
 					$http.get(source)
-						.success(function(data) {
-							$("#contentdiv").html(data);
+						.success(function(data) {							
+							$("#contentdiv").html(data);														
 							//$scope.content = data;							
 						})
 						.error(function(data,status,error,config){
 							$scope.error = [{heading:"Error",description:"Could not load headings"}];
 						});
-				}
+				}				
 				$http.get('data/headings.json')
 						.success(function(data) {
 							$scope.headings=data;
@@ -61,7 +59,7 @@
 						.error(function(data,status,error,config){
 							$scope.error = [{heading:"Error",description:"Could not load headings"}];
 						});
-			$scope.myFunction("aboutme.html")				
+			$scope.myFunction("About Me", "aboutme.html")				
 			});
 			
 			$(document).on('click','.navbar-collapse.in',function(e) {

@@ -1,4 +1,4 @@
-latlong = {"latitude":50,"longitude":50}
+var latlong = {"latitude":50,"longitude":50}
 
 function getLocation() {
     if (navigator.geolocation){
