@@ -1,4 +1,5 @@
 latlong = {"latitude":50,"longitude":50}
+
 function getLocation() {
     if (navigator.geolocation){
         navigator.geolocation.getCurrentPosition(showPosition);
