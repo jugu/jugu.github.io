@@ -1,0 +1,17 @@
+<div class="default_post">
+	<h1 class="{{(post.classalias) || 'default_postalias'}}">{{post.alias}}</h1>
+	<b class="default_postdate">{{post.date}}</b>
+	<hr/>
+	<div style="{{(post.stylecontent) || ''}}">
+		<div>
+			<p ng-repeat="x in post.minutes">{{x}}</p>
+		</div>
+		<div id="personal"></div>
+		<div ng-bind-html="post.postcontent"></div>
+		<hr/>
+		<div id="extra" ng-bind-html="post.extra"></div>
+		<div id="labels">
+			<span ng-repeat="x in post.labels" class="label {{(x.class) || 'label-default'}}">{{x.label}}</span>
+		</div>
+	</div>
+</div>

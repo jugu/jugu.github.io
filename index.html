@@ -6,6 +6,12 @@
 		<title>
 			Jugu Danne Sundar's Page
 		</title>
+		<style>
+			.socialLink {
+				border: 0px;
+				width:100%;
+			}
+		</style>
 	</head>
 	<body>				
 		<div class="container" ng-app="app" ng-controller="controller">
@@ -18,11 +24,10 @@
 					<span class="icon-bar"></span>                        
 					</button>
 					<span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
-				    <!--<a class="navbar-brand" href="#">&nbsp;</a>-->
 				</div>
 				<div class="collapse navbar-collapse" id="myNavbar">
 					<ul class="nav navbar-nav">
-						<li ng-repeat="x in headings.headings" ng-class="{'active': x.name == activeItem}"><a href="#" ng-click="myFunction(x.name, x.source)">{{x.name}}</a></li>
+						<li ng-repeat="x in site.headings" ng-class="{'active': x.name == activeItem}"><a href="#" ng-click="myFunction(x.name, x.source)">{{x.name}}</a></li>
 					</ul>
 				</div>
 			</nav>	
@@ -30,26 +35,41 @@
 				<div class="col-sm-2">
 					<div style='background-color:lightgray;color:white' align='middle'>Social networks</div>
 					<div align='middle'>
-						<!-- Facebook Badge START --><a href="https://www.facebook.com/Jugu.Dannie" title="Jugu Dannie Sundar" style="font-family: &quot;lucida grande&quot;,tahoma,verdana,arial,sans-serif; font-size: 11px; font-variant: normal; font-style: normal; font-weight: normal; color: #3B5998; text-decoration: none;" target="_TOP">Jugu Dannie Sundar</a><span style="font-family: &#039;lucida grande&#039;,tahoma,verdana,arial,sans-serif;font-size: 11px;line-height: 16px;font-variant: normal;font-style: normal;font-weight: normal;color: #555555;text-decoration: none;"></span><br /><a href="https://www.facebook.com/Jugu.Dannie" title="Jugu Dannie Sundar" target="_TOP"><img class="img" src="https://badge.facebook.com/badge/500689165.9298.819076048.png" style="border: 0px;" alt="" /></a><!-- Facebook Badge END -->
+						<a href="https://www.facebook.com/Jugu.Dannie" title="Jugu Dannie Sundar" target="_TOP"><img class="img socialLink" src="https://badge.facebook.com/badge/500689165.9298.819076048.png" alt="" /></a>						
 					</div>		
-					<hr/>
+					<hr/>					
 					<div align='middle'>
-						<a href="https://www.linkedin.com/pub/jugu-dannie-sundar/15/b69/932">      
-						<img src="https://static.licdn.com/scds/common/u/img/webpromo/btn_myprofile_160x33.png" width="160" height="33" border="0" alt="View Jugu Dannie Sundar's profile on LinkedIn">        
-						</a>
+						<a href="https://www.linkedin.com/in/jugudannie">      
+						<button type="button" class="btn btn-primary socialLink" style='background-color:#4875B4;'>LinkedIn<span class="badge"></span></button>
+						</a>						
 					</div>						
 					<hr/>
-					<div align="middle" style='overflow:hidden'>
-						<iframe src="http://githubbadge.appspot.com/jugu?a=0" style="border: 0;height: 142px;width: 200px;overflow: hidden;" frameBorder="0"></iframe>
+					<div align='middle'>
+						<a href="https://github.com/jugu">      
+						<button type="button" class="btn btn-primary socialLink" style='background-color:#f5f5f5;color:black;font-weight:bold'>GitHub<span class="badge"></span></button>
+						</a>						
 					</div>
 					<hr/>
-					<!--<div align="middle">
-						<script src="https://apis.google.com/js/platform.js" async defer></script>
-						<div class="g-person" data-href="https://plus.google.com/+JuguDannie" data-width="40"></div>
-					</div>-->
+					<div align='middle'>
+						<a href="https://twitter.com/jugudannie">      
+						<button type="button" class="btn btn-primary socialLink" style='background-color:#33CCFF'>Twitter<span class="badge"></span></button>
+						</a>						
+					</div>
+					<hr/> 
+					<div align='middle'>
+						<a href="https://plus.google.com/+JuguDannie">      
+						<button type="button" class="btn btn-primary socialLink" style='background-color:#C63D2D'>Google+<span class="badge"></span></button>
+						</a>						
+					</div>						
+					<hr/>
+					<div align='middle'>
+						<a href="mailto:jugu.87@gmail.com?Subject=Hello%20Jugu" target="_top">
+						<span class="badge">Message me</span>
+						</a>
+					</div>
 				</div>
-				<div class="col-sm-10">
-					<div ng-bind-html="content" id="contentdiv"></div>
+				<div class="col-sm-10">					
+					<div id="contentdiv" bind-unsafe-html="content"></div>
 				</div>
 			</div>
 		</div>
@@ -61,14 +81,36 @@
 		<script type = 'text/javascript' src="scripts/jugu.js"></script>					
 		<script>
 			var app = angular.module('app', ['ngSanitize']);
-			app.controller('controller', function ($scope, $http) {				
-				$scope.activeItem = "About Me";				
+			app.directive('bindUnsafeHtml', ['$compile', function ($compile) {
+				return function(scope, element, attrs) {
+					scope.$watch(
+						function(scope) {
+						  // watch the 'bindUnsafeHtml' expression for changes
+						  return scope.$eval(attrs.bindUnsafeHtml);
+						},
+						function(value) {
+						  // when the 'bindUnsafeHtml' expression changes
+						  // assign it into the current DOM
+						  element.html(value);
+
+						  // compile the new DOM and link it to the current
+						  // scope.
+						  // NOTE: we only compile .childNodes so that
+						  // we don't get into infinite loop compiling ourselves
+						  $compile(element.contents())(scope);
+						}
+					);
+				};
+			}]);
+			app.controller('controller', function ($scope, $http, $sce, $compile) {								
+				$scope.toTrustedHTML = function( html ){
+					return $sce.trustAsHtml( html );
+				}				
 				$scope.myFunction = function(name, source) {								
 					$scope.activeItem = name;					
 					$http.get(source)
 						.success(function(data) {							
-							$("#contentdiv").html(data);														
-							//$scope.content = data;							
+							$scope.content=data;							
 						})
 						.error(function(data,status,error,config){
 							$scope.error = [{heading:"Error",description:"Could not load headings"}];
@@ -76,12 +118,36 @@
 				}				
 				$http.get('data/headings.json')
 						.success(function(data) {
-							$scope.headings=data;
+							$scope.site=data;
 						})
 						.error(function(data,status,error,config){
 							$scope.error = [{heading:"Error",description:"Could not load headings"}];
 						});
-			$scope.myFunction("About Me", "aboutme.html")				
+				$scope.loadpost = function(id) {								
+					$scope.activePostId = id;
+					var postlink = '';
+					var length = $scope.site.posts.length;
+					var posts = $scope.site.posts;
+					for (var t = 0; t < length;t++)
+					{
+						if (posts[t].id == id)
+						{
+							post = posts[t];
+							postlink = posts[t].link;
+							break;
+						}
+					}
+					$http.get(postlink)
+						.success(function(data) {							
+							$scope.posthtml = data;	
+							$scope.post = post;
+						})
+						.error(function(data,status,error,config){
+							$scope.error = [{heading:"Error",description:"Could not load headings"}];
+						});
+				}
+				$scope.activeItem = "About Me";		
+				$scope.myFunction("About Me", "aboutme.html")								
 			});
 			
 			$(document).on('click','.navbar-collapse.in',function(e) {

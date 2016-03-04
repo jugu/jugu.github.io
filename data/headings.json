@@ -1,4 +1,26 @@
 {"headings":[{"name":"About Me", "source":"aboutme.html"}, 
 			 {"name":"CV", "source":"cv.html"},
-			 {"name":"Stuff", "source":"works.html"}
-			]}
+			 {"name":"Mini Diary", "source":"posts.html"},
+			 {"name":"stuff", "source":"works.html"}
+			],
+ "status":"<b>[3 March 2016]</b> I am a first year master's student (joined Fall 2015) at <a href=\"http://www.stonybrook.edu/\">Stony Brook University </a> enrolled in the <a href=\"https://www.cs.stonybrook.edu/\">Computer Science</a> program. I have 6 years of software product development experience using Java/J2EE based web technologies.",
+ 
+ "knowsabout":"Retail Workforce Management software, Product Development, Requirement Analysis, Technical Specification, Development Estimates, Implementation, Quality Assurance Testing, Full Stack Development, Agile Technologies",
+ 
+ "posts":[{
+			"id":"1",
+			"name":"3 March 2016",
+			"alias":"Something New...",
+			"date":"3 March 2016",
+			"link":"post/basic.html",
+			"minutes":["Rode bicycle to college for 20 miles to and fro",
+			          "Learned about binomial heap in Algorithms class"],
+			"postcontent":"Attended Faculty Candidate talk by <a href=\"http://jamestompkin.com/\">James Tompkin</a> who gave lecture on <b>Intelligent Video Interfaces</b>",
+			"extra":"<br/><i>Initial concept of my webpage</i>",
+			"labels":[{"label":"experiment","class":"label-primary"},
+					  {"label":"iterative development"}					  
+					 ]
+		}
+		
+		
+]}

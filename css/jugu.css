@@ -4,3 +4,12 @@ body {
 .bar:hover {
 	fill: brown;
 }
+.default_post{
+	background-color:#ffffff;
+}
+.default_postalias{
+	background-color:#f5f5f5;
+}
+.default_postdate{
+	background-color:#ffffff;
+}

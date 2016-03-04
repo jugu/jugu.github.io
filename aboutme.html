@@ -1,12 +1,8 @@
 <div width="100%">
-	<b> Jugu Dannie Sundar </b>
+	<h1>Jugu Dannie Sundar</h1>
 	<div style='background-color:lightblue;font-weight:bold'>Status</div>
 	<div>
-		<p>
-			I am a first year master's student (joined Fall 2015) at <a href="http://www.stonybrook.edu/">Stony Brook University </a> enrolled in the <a href="https://www.cs.stonybrook.edu/">Computer Science</a> program. I have 6 years of software product development experience using Java/J2EE based web technologies.
-		</p>
-		<p>
-			I am actively looking for internship in Summer 2016
+		<p ng-bind-html="site.status">
 		</p>
 	</div>		
 	<div style='background-color:lightblue;font-weight:bold'>Skills</div>	
@@ -88,8 +84,7 @@
 	<div style="background-color:lightblue;font-weight:bold">
 		Knows about
 	</div>
-	<p>Retail Workforce Management software, Product Development, Requirement Analysis, Technical Specification, Development Estimates,
-	   Implementation, Quality Assurance Testing, Full Stack Development, Agile Technologies
+	<p ng-bind="site.knowsabout">
 	</p>
 	
 </div>
