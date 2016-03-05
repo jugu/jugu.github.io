@@ -3,11 +3,13 @@
 			 {"name":"Mini Diary", "source":"posts.html"},
 			 {"name":"stuff", "source":"works.html"}
 			],
- "status":"<b>[3 March 2016]</b> I am a first year master's student (joined Fall 2015) at <a href=\"http://www.stonybrook.edu/\">Stony Brook University </a> enrolled in the <a href=\"https://www.cs.stonybrook.edu/\">Computer Science</a> program. I have 6 years of software product development experience using Java/J2EE based web technologies.<b><i>I am actively looking for internship during summer 2016</i></b>",
+ "status":"<b>[3 March 2016]</b> I am a first year master's student (joined Fall 2015) at <a href=\"http://www.stonybrook.edu/\">Stony Brook University </a> enrolled in the <a href=\"https://www.cs.stonybrook.edu/\">Computer Science</a> program. I have 6 years of software product development experience using Java/J2EE based web technologies.<br/><b><i>I am actively looking for internship during summer 2016</i></b>",
  
  "knowsabout":"Retail Workforce Management software, Product Development, Requirement Analysis, Technical Specification, Development Estimates, Implementation, Quality Assurance Testing, Full Stack Development, Agile Technologies",
  
- "posts":[{
+ "posts":[
+ 
+		{
 			"id":"1",
 			"name":"3 March 2016",
 			"alias":"Something New...",
@@ -19,6 +21,20 @@
 			"extra":"<br/><i>Initial concept of my webpage</i>",
 			"labels":[{"label":"experiment","class":"label-primary"},
 					  {"label":"iterative development"}					  
+					 ]
+		},
+		{
+			"id":"2",
+			"name":"4 March 2016",
+			"alias":"Slight Progress",
+			"date":"4 March 2016",
+			"link":"post/basic.html",
+			"minutes":["Learned about Attribute Grammar (Synthesized and Inherited) in Compilers Course",
+			          "Attended project meeting to discuss about the project progress"],
+			"postcontent":"",
+			"extra":"<br/><i>Project is about Text Mining and Natural Language Processing of biomedical texts to aid in Patient centred identification, attribution, and ranking of adverse drug events</i>",
+			"labels":[{"label":"grammar","class":"label-primary"},
+					  {"label":"project"}					  
 					 ]
 		}
 		
