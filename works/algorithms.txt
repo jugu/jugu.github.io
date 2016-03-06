@@ -1,0 +1,11 @@
+<div class="default_post">
+	<h1 class="{{(work.classalias) || 'default_postalias'}}">{{work.alias}}</h1>
+	<b class="default_postdate">{{work.date}}</b>
+	<hr/>
+	<div>
+		<h4>LR(0) Parser</h4>
+	</div>
+	<div id="labels">
+		<span ng-repeat="x in work.labels" class="label {{(x.class) || 'label-default'}}">{{x.label}}</span>
+	</div>
+</div>

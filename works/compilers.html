@@ -1,0 +1,42 @@
+<div class="default_post">
+	<h1 class="{{(work.classalias) || 'default_postalias'}}">{{work.alias}}</h1>
+	<b class="default_postdate">{{work.date}}</b>
+	<hr/>
+	<div class="row">
+		<div class="col-sm-12">
+		<h4>FIRST and FOLLOW</h4>
+		<div>Example 1
+			<pre>
+				E -> TE'
+				E' -> +TE'/&epsilon;
+				T -> FT'
+				T' -> *FT'/&epsilon;
+				F -> id/(E)
+			</pre>
+		</div>
+	</div>
+	<div class="row">
+		
+		<div class="col-sm-4">
+			<pre>
+First(E) = First(T) = {id, (}
+First(E') = {+,&epsilon;}
+First(T) = First(F) = {id,(}
+First(T') = {*,&epsilon;}
+First(F) = {id, (}		
+			</pre>
+		</div>
+		<div class="col-sm-8">
+			<pre>
+Follow(E) = {),$}
+Follow(E') = {Follow(E), Follow(E')} = {),$}
+Follow(T) = {First(E') - &epsilon;, Follow(E')} = {+,),$}
+Follow(T') = {Follow(T), Follow(T')} = {+,),$}
+Follow(F) = {First(T')- &epsilon;, Follow(T)} = {*,+,),$}
+			</pre>
+		</div>
+	</div>
+	<div id="labels">
+		<span ng-repeat="x in work.labels" class="label {{(x.class) || 'label-default'}}">{{x.label}}</span>
+	</div>
+</div>

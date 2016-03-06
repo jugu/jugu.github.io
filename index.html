@@ -121,10 +121,34 @@
 						.success(function(data) {
 							$scope.site=data;
 							$scope.activePostId = $scope.site.posts[$scope.site.posts.length - 1].id;
+							$scope.activeWorkId = $scope.site.works[$scope.site.works.length - 1].id;
 						})
 						.error(function(data,status,error,config){
 							$scope.error = [{heading:"Error",description:"Could not load headings"}];
 						});
+				$scope.loadwork = function(id) {								
+					$scope.activeWorkId = id;
+					var worklink = '';
+					var length = $scope.site.works.length;
+					var works = $scope.site.works;
+					for (var t = 0; t < length;t++)
+					{
+						if (works[t].id == id)
+						{
+							work = works[t];
+							worklink = works[t].link;
+							break;
+						}
+					}
+					$http.get(worklink)
+						.success(function(data) {							
+							$scope.workhtml = data;	
+							$scope.work = work;
+						})
+						.error(function(data,status,error,config){
+							$scope.error = [{heading:"Error",description:"Could not load work"}];
+						});
+				}
 				$scope.loadpost = function(id) {								
 					$scope.activePostId = id;
 					var postlink = '';
@@ -145,7 +169,7 @@
 							$scope.post = post;
 						})
 						.error(function(data,status,error,config){
-							$scope.error = [{heading:"Error",description:"Could not load headings"}];
+							$scope.error = [{heading:"Error",description:"Could not load post"}];
 						});
 				}				
 				$scope.activeItem = "About Me";		

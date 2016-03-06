@@ -7,6 +7,17 @@
  
  "knowsabout":"Retail Workforce Management software, Product Development, Requirement Analysis, Technical Specification, Development Estimates, Implementation, Quality Assurance Testing, Full Stack Development, Agile Technologies",
  
+ "works":[
+
+		 {
+			"id":"1",
+			"name":"Compilers",
+			"alias":"Compilers",
+			"link":"works/compilers.html" 
+		 }
+		 
+		 ],
+		 
  "posts":[
  
 		{
@@ -35,6 +46,21 @@
 			"extra":"<br/><i>Project is about Text Mining and Natural Language Processing of biomedical texts to aid in Patient centred identification, attribution, and ranking of adverse drug events</i>",
 			"labels":[{"label":"grammar","class":"label-primary"},
 					  {"label":"project"}					  
+					 ]
+		},
+		{
+			"id":"3",
+			"name":"5 March 2016",
+			"alias":"Exams coming up",
+			"date":"5 March 2016",
+			"link":"post/basic.html",
+			"minutes":["Did Grocery Shopping",
+			          "Vacuumed car",
+					  "Studied Compilers(FIRST, FOLLOW, LL(1), LR(0), and SLR(1))"],
+			"postcontent":"",
+			"extra":"<br/><i>Have few assignments coming up. Going to be a busy week!</i>",
+			"labels":[{"label":"groceries","class":"label-primary"},
+					  {"label":"exams"}					  
 					 ]
 		}
 		

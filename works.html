@@ -1,5 +1,16 @@
 <div class="row">
-	<div class="col-sm-12">
-		Thinking about it
+	<div class="col-sm-2">
+		<ul class="nav nav-pills nav-stacked">
+			<li ng-repeat="x in site.works| orderBy:'id'" ng-class="{'active': x.id == activeWorkId}"><a href="#" ng-click="loadwork(x.id)">{{x.name}}</a></li>
+		</ul>
 	</div>
+	<div class="col-sm-10"  bind-unsafe-html="workhtml">
+	</div>
+	<script>
+		var scope = angular.element($("#maindiv")).scope();
+		/*scope.$apply(function(){
+			scope.msg = 'Superhero';
+		})*/
+		scope.loadwork(scope.activeWorkId);
+	</script>
 </div>
