@@ -62,6 +62,21 @@
 			"labels":[{"label":"groceries","class":"label-primary"},
 					  {"label":"exams"}					  
 					 ]
+		},
+		{
+			"id":"4",
+			"name":"6 March 2016",
+			"alias":"Lazy Sunday",
+			"date":"6 March 2016",
+			"link":"post/basic.html",
+			"minutes":["Prepared for Compilers Exam",
+			          "Worried about future!",
+					  "Growing fond of Cottage Cheese!"],
+			"postcontent":"<br/><a href=\"https://youtu.be/BAqgHmIwp00\">Soothing song!</a><br/><iframe width='560' height='315' src='https://www.youtube.com/embed/BAqgHmIwp00' frameborder='0' allowfullscreen></iframe>",
+			"extra":"",
+			"labels":[{"label":"preparation","class":"label-primary"},
+					  {"label":"worry"}					  
+					 ]
 		}
 		
 		
