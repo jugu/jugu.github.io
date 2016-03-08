@@ -77,6 +77,21 @@
 			"labels":[{"label":"preparation","class":"label-primary"},
 					  {"label":"worry"}					  
 					 ]
+		},
+		{
+			"id":"5",
+			"name":"7 March 2016",
+			"alias":"Compiler Error",
+			"date":"7 March 2016",
+			"link":"post/basic.html",
+			"minutes":["Wrote Compilers course mid sem exam.(Could have done better)",
+			          "Started Visualization homework",
+					  "Homemade pancakes for dinner!"],
+			"postcontent":"",
+			"extra":"<br/><i>Want to focus harder, but Mind has a mind of its own!</i>",
+			"labels":[{"label":"groceries","class":"label-primary"},
+					  {"label":"exams"}					  
+					 ]
 		}
 		
 		
