@@ -89,8 +89,23 @@
 					  "Homemade pancakes for dinner!"],
 			"postcontent":"",
 			"extra":"<br/><i>Want to focus harder, but Mind has a mind of its own!</i>",
-			"labels":[{"label":"groceries","class":"label-primary"},
-					  {"label":"exams"}					  
+			"labels":[{"label":"bad exam day","class":"label-primary"},
+					  {"label":"focus (lack of))"}					  
+					 ]
+		},
+		{
+			"id":"6",
+			"name":"8 March 2016",
+			"alias":"Rabin Karp algorithm",
+			"date":"8 March 2016",
+			"link":"post/basic.html",
+			"minutes":["Learned about Rabin Karp algorithm for String matching",
+			          "The Rabin Karp algorithm effectively uses hash functions. It uses a rolling hash. ",
+					  "Started Visualization assignment for data analytics and visualizaiton"],
+			"postcontent":"",
+			"extra":"<br/><i>When the going gets tough, the tough get going!</i>",
+			"labels":[{"label":"rabin karp","class":"label-primary"},
+					  {"label":"algorithm"}					  
 					 ]
 		}
 		
