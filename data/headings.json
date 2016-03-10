@@ -122,6 +122,20 @@
 			"labels":[{"label":"visualization","class":"label-primary"},
 					  {"label":"finding it hard"}					  
 					 ]
+		},
+		{
+			"id":"8",
+			"name":"10 March 2016",
+			"alias":"Bloom Filter",
+			"date":"10 March 2016",
+			"link":"post/basic.html",
+			"minutes":["Learned about Bloom Filter",
+			          "Still visualization is hard",
+					  "Updated Resume"],
+			"postcontent":"",
+			"extra":"<br/><a href="https://en.wikipedia.org/wiki/Bloom_filter">Bloom Filter</a></i>",
+			"labels":[{"label":"Bloom Filter","class":"label-primary"}					  
+					 ]
 		}
 		
 		
