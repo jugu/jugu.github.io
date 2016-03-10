@@ -133,7 +133,7 @@
 			          "Still visualization is hard",
 					  "Updated Resume"],
 			"postcontent":"",
-			"extra":"<br/><a href=\"https://en.wikipedia.org/wiki/Bloom_filter\">Bloom Filter</a></i>",
+			"extra":"<br/><i><a href=\"https://en.wikipedia.org/wiki/Bloom_filter\">Bloom Filter</a></i>",
 			"labels":[{"label":"Bloom Filter","class":"label-primary"}					  
 					 ]
 		}
