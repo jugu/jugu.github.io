@@ -107,6 +107,21 @@
 			"labels":[{"label":"rabin karp","class":"label-primary"},
 					  {"label":"algorithm"}					  
 					 ]
+		},
+		{
+			"id":"7",
+			"name":"9 March 2016",
+			"alias":"Visualization is hard",
+			"date":"9 March 2016",
+			"link":"post/basic.html",
+			"minutes":["Learned to use flask with python",
+			          "Realized that visualization is hard",
+					  "Vision coupled with execution creates Leaders"],
+			"postcontent":"",
+			"extra":"<br/><i>When the going gets tough, the tough get going!</i>",
+			"labels":[{"label":"visualization","class":"label-primary"},
+					  {"label":"finding it hard"}					  
+					 ]
 		}
 		
 		
