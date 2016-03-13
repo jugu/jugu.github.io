@@ -131,10 +131,42 @@
 			"link":"post/basic.html",
 			"minutes":["Learned about Bloom Filter",
 			          "Still visualization is hard",
-					  "Updated Resume"],
+					  "Updated Resume",
+					  "Midterm Review for Visualization"
+					  ],
 			"postcontent":"",
 			"extra":"<br/><i><a href=\"https://en.wikipedia.org/wiki/Bloom_filter\">Bloom Filter</a></i>",
 			"labels":[{"label":"Bloom Filter","class":"label-primary"}					  
+					 ]
+		},
+		{
+			"id":"9",
+			"name":"11 March 2016",
+			"alias":"Type Checking",
+			"date":"11 March 2016",
+			"link":"post/basic.html",
+			"minutes":["Learned about Type Checking in Compilers Course",
+			          "Cycled to and fro to college for 20 miles",
+					  "Met former colleague in New York City"
+					  ],
+			"postcontent":"",
+			"extra":"<br/><i>Friday fun</i>",
+			"labels":[{"label":"Typical Friend","class":"label-primary"}					  
+					 ]
+		},
+		{
+			"id":"10",
+			"name":"12 March 2016",
+			"alias":"Lazy Saturday",
+			"date":"12 March 2016",
+			"link":"post/basic.html",
+			"minutes":["Did grocery shopping",
+			          "Cottage cheese now a regular item",
+					  "Trying out dry plums (prunes)"
+					  ],
+			"postcontent":"",
+			"extra":"<br/><i>Friday fun</i>",
+			"labels":[{"label":"Typical Friend","class":"label-primary"}					  
 					 ]
 		}
 		
