@@ -165,8 +165,23 @@
 					  "Trying out dry plums (prunes)"
 					  ],
 			"postcontent":"",
-			"extra":"<br/><i>Friday fun</i>",
-			"labels":[{"label":"Typical Friend","class":"label-primary"}					  
+			"extra":"<br/><i>Typical Saturday</i>",
+			"labels":[{"label":"shopping","class":"label-primary"}					  
+					 ]
+		},
+		{
+			"id":"11",
+			"name":"13 March 2016",
+			"alias":"Stay at home student",
+			"date":"13 March 2016",
+			"link":"post/basic.html",
+			"minutes":["Stayed at home",
+			          "Studied",
+					  "Cottage cheese + chopped dry plums + drops of honey = nice snack"
+					  ],
+			"postcontent":"",
+			"extra":"<br/><i>Mundane Sunday</i>",
+			"labels":[{"label":"innosnack","class":"label-primary"}					  
 					 ]
 		}
 		
