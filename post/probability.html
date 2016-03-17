@@ -1,0 +1,140 @@
+<div class="default_post">
+	<h1 class="{{(post.classalias) || 'default_postalias'}}">{{post.alias}}</h1>
+	<b class="default_postdate">{{post.date}}</b>
+	<hr/>
+	<div style="{{(post.stylecontent) || ''}}">
+		<div>
+			<p ng-repeat="x in post.minutes">{{x}}</p>
+		</div>
+		<div id="personal">
+			<hr/>
+			<h1>Lottery - Quick Draw</h1>			
+			<hr/>
+			<ul> 
+				<li>This game is played daily every 4 minutes.</li>
+				<li>For each draw, the player has the option to pick a number of slots (maximum 10)</li>
+				<li>The player then gets to pick numbers for those slots from 80 numbers (1 through 80)</li>
+				<li>The numbers cannot be repeated</li>
+				<li>The player bets in increments of 1$ for each draw`
+				<li>During the draw, 20 numbers are chosen by the lottery machine </li>
+				<li>The players wins prizes through multipliers for every 1$ invested in the draw. The list of prizes is given below</li>
+			</ul>
+			<b>Prize details taken from <a href="http://nylottery.ny.gov/wps/portal/Home/Lottery/Home/Daily+Games/QUICK+DRAW/Quick+Draw+-+Chances+of+Winning">NY Lottery</a></b>
+		<p>Now let's examine the probabilities winning a prize</p>
+		<p>For 1 SPOT game</p>
+		<pre>
+Numbers Matched Winning Per $1 Played
+1 $2
+Overall Chances of Winning 1:4.00
+<b>Derivation</b>
+Number of ways of choosing 1 number from 80 = 80<b>C</b>1 = 80				
+Number of ways for the 1 number to be among the 20 selected by the lottery machine = 20<b>C</b>1 = 20		
+Pr(winning a prize) = 20/80 = 1/4 = 1 in four chance
+ 		</pre>
+		<p>For 2 SPOT game</p>
+		<pre>
+Numbers Matched Winning Per $1 Played
+2 $10
+Overall Chances of Winning 1:16.63
+<b>Derivation</b>		
+Number of ways of choosing 2 number from 80 = 80<b>C</b>2 = 3160				
+Number of ways for the 2 numbers to be among the 20 selected by the lottery machine = 20<b>C</b>2 = 190
+Pr(winning a prize) = 190/3160 = 1/16.63 = 1 in 16.63 chance
+ 		</pre>
+		<p>For 3 SPOT game</p>
+		<pre>
+Numbers Matched Winning Per $1 Played
+3 $23
+2 $2
+Overall Chances of Winning 1:6.55
+<b>Derivation</b>		
+Number of ways of choosing 3 number from 80 = 80<b>C</b>3 = 82160		
+Number of ways for the 3 numbers to be among the 20 selected by the lottery machine = 20<b>C</b>3 = 1140
+Number of ways for the 2 numbers to be among the 20 selected by the lottery machine and 1 number not among the 20 = 20<b>C</b>2 x 60<b>C</b>1 = 11400
+Pr(winning a prize) = (1140 + 11400)/82160 = 1/6.55 = 1 in 6.55 chance
+ 		</pre>
+		<p>For 4 SPOT game</p>
+		<pre>
+Numbers Matched Winning Per $1 Played
+4 $55
+3 $5
+2 $1
+Overall Chances of Winning 1:3.86
+<b>Derivation</b>		
+Number of ways of choosing 4 number from 80 = 80<b>C</b>4 = 1581580		
+Number of ways for the 4 numbers to be among the 20 selected by the lottery machine = 20<b>C</b>4 = 4845
+Number of ways for the 3 numbers to be among the 20 selected by the lottery machine and 1 number not among the 20 = 20<b>C</b>3 x 60<b>C</b>1 = 68400
+Number of ways for the 2 numbers to be among the 20 selected by the lottery machine and 2 number not among the 20 = 20<b>C</b>2 x 60<b>C</b>2 = 336300
+Pr(winning a prize) = (4845 + 68400 + 336300)/1581580 = 1/3.86 = 1 in 3.86 chance
+ 		</pre>
+		<p>For 5 SPOT game</p>
+<pre>		
+Numbers Matched Winning Per $1 Played
+5 $300
+4 $20
+3 $2
+Overall Chances of Winning 1:10.34
+<b>Derivation</b>		
+Number of ways of choosing 5 number from 80 = 80<b>C</b>5 = 24040016		
+Number of ways for the 5 numbers to be among the 20 selected by the lottery machine = 20<b>C</b>5 = 15504
+Number of ways for the 4 numbers to be among the 20 selected by the lottery machine and 1 number not among the 20 = 20<b>C</b>4 x 60<b>C</b>1 = 290700
+Number of ways for the 3 numbers to be among the 20 selected by the lottery machine and 2 number not among the 20 = 20<b>C</b>3 x 60<b>C</b>2 = 2017800
+Pr(winning a prize) = (15504 + 290700 + 2017800)/24040016 = 1/10.34 = 1 in 10.34 chance
+</pre><pre>
+Similarly
+			10 SPOT GAME
+Numbers Matched Winning Per $1 Played
+10 $100,000
+9 $5,000
+8 $300
+7 $45
+6 $10
+5 $2
+0 $5
+Overall Chances of Winning 1:9.05
+
+9 SPOT GAME
+Numbers Matched Winning Per $1 Played
+9 $30,000
+8 $3,000
+7 $125
+6 $20
+5 $5
+0 $2
+Overall Chances of Winning 1:9.74
+
+8 SPOT GAME
+Numbers Matched Winning Per $1 Played
+8 $10,000
+7 $550
+6 $75
+5 $6
+0 $2
+Overall Chances of Winning 1:9.17
+
+7 SPOT GAME
+Numbers Matched Winning Per $1 Played
+7 $5,000
+6 $100
+5 $20
+4 $2
+0 $1
+Overall Chances of Winning 1:5.46
+
+6 SPOT GAME
+Numbers Matched Winning Per $1 Played
+6 $1,000
+5 $55
+4 $6
+3 $1
+Overall Chances of Winning 1:6.19
+			</pre>
+		</div>
+		<div bind-unsafe-html="post.postcontent"></div>
+		<hr/>
+		<div id="extra" ng-bind-html="post.extra"></div>
+		<div id="labels">
+			<span ng-repeat="x in post.labels" class="label {{(x.class) || 'label-default'}}">{{x.label}}</span>
+		</div>
+	</div>
+</div>
