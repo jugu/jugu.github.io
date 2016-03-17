@@ -212,6 +212,21 @@
 			"extra":"<br/><i>March madness</i>",
 			"labels":[{"label":"exercise","class":"label-primary"}					  
 					 ]
+		},
+		{
+			"id":"14",
+			"name":"16 March 2016",
+			"alias":"Middle of Spring Break",
+			"date":"16 March 2016",
+			"link":"post/probability.html",
+			"minutes":["Little study",
+					  "Extended my streak of exercising to 2 days",
+					  "Biked for a couple of miles and tried the 7 minute exercise"
+					  ],
+			"postcontent":"",
+			"extra":"<br/><i>Peak of Break</i>",
+			"labels":[{"label":"exercise","class":"label-primary"}					  
+					 ]
 		}
 		
 		
