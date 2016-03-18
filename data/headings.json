@@ -227,6 +227,22 @@
 			"extra":"<br/><i>Peak of Break</i>",
 			"labels":[{"label":"exercise","class":"label-primary"}					  
 					 ]
+		},
+		{
+			"id":"15",
+			"name":"17 March 2016",
+			"alias":"Just keep cycling",
+			"date":"17 March 2016",
+			"link":"post/basic.html",
+			"minutes":["Compilers homework is tough",
+					  "Extended my streak of exercising to 3 days",
+					  "Biked for a couple of hours.",
+					  "My favorite place in Long Island (so far) is West Sayville Docks"
+					  ],
+			"postcontent":"<br/><iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.884502816374!2d-73.09581868462317!3d40.72055897933088!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e8358b89d74edf%3A0x449216e297e56a22!2s159+West+Ave%2C+Patchogue%2C+NY+11772!5e0!3m2!1sen!2sus!4v1458280750776\" width=\"560\" height=\"300\" frameborder=\"0\" style=\"border:0\" allowfullscreen></iframe><br/>Soothing Song<br/><iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/WQvM4EM0lO8\" frameborder=\"0\" allowfullscreen></iframe>",
+			"extra":"<br/><i>Peak of Break</i>",
+			"labels":[{"label":"exercise","class":"label-primary"}					  
+					 ]
 		}
 		
 		
