@@ -121,6 +121,9 @@
 				}				
 				$http.get('data/headings.json')
 						.success(function(data) {
+							angular.forEach(data.posts, function (detail) {
+								detail.id = parseInt(detail.id);
+							});
 							$scope.site=data;
 							$scope.activePostId = $scope.site.posts[$scope.site.posts.length - 1].id;
 							$scope.activeWorkId = $scope.site.works[$scope.site.works.length - 1].id;
