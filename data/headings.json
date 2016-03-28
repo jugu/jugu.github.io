@@ -258,6 +258,23 @@
 			"extra":"<br/><i>Last days of Break</i>",
 			"labels":[{"label":"after break","class":"label-primary"}					  
 					 ]
+		},
+		{
+			"id":"17",
+			"name":"20-27 March 2016",
+			"alias":"First Week after Spring Break",
+			"date":"20-27 March 2016",
+			"link":"post/20160326.html",
+			"minutes":["Finished Visualization homework - Consisted of Cluster analysis using PCA, MDS, IsoMap",
+					  "Finished Compilers homework for builing Abstract Syntax tree for the Decaf Language",
+					  "Learned about Cuckoo Filter and Treaps(Tree + Heap) data structures in Algorithms class",
+					  "Learned about Type Checking in Compilers class",
+					  "Made progress with the project involving semantic analysis and named entity normalization"
+					  ],
+			"postcontent":"",
+			"extra":"",
+			"labels":[{"label":"Back to routine","class":"label-primary"}					  
+					 ]
 		}
 		
 		
