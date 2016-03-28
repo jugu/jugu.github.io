@@ -1,0 +1,50 @@
+<div class="default_post">
+	<h1 class="{{(post.classalias) || 'default_postalias'}}">{{post.alias}}</h1>
+	<b class="default_postdate">{{post.date}}</b>
+	<hr/>
+	<div style="{{(post.stylecontent) || ''}}">
+		<div>
+			<p ng-repeat="x in post.minutes">{{x}}</p>
+		</div>
+		<div id="personal">
+			Some Recipes that I tried
+			<br/>
+			<ol>
+				<li><b>Protein Pancakes - (Preparation time 20 minutes)</b>
+					<ul>
+						<li>Preheat pan with very little oil</li>
+						<li>In a bowl add half cup of pancake mix (I prefer Kodiak Flapjacks since they use 100% whole wheat flour which is way better than enriched flour and also have 14g protein per serving)</li>
+						<li>Now add half scoop of whey protein powder (I prefer the OnPerformance brand which provides 30g per scoop)</li>
+						<li>In a separate cup, break open raw egg and add a quarter amount of milk. Mix well</li>
+						<li>Now add the liquid to the flour/protein mix and again mix till there is no dry flour.</li>
+						<li>Don't overstir (lumps are fine). If the mix is too thin consider adding extra flour. If it is too thick add little more milk</li>
+						<li>(optional) Now mash a banana and add it to the mix and stir (Gives good texture and taste)</li>
+						<li>(optional) You can chop strawberries and add to the mix and stir too (Makes pancakes sweet)</li>
+						<li>Now add the mixed batter in small proportions (as desired) to the hot pan</li>
+						<li>Gently flip after 1-2 minutes</li>
+						<li>Once both sides are cooked, put the pancake on a plate with a paper towel(to prevent soggy pancake at bottom)
+						<li>Repeat the process for more pancakes. You don't have to oil the pan after the first pancake.</li>
+						<li>The portions listed above should give you 3-5 pancakes depending on the portion sizes you put in the pan</li>
+						<li>Serve with butter/Maple Syrup/fruit jam</li>
+					</ul> 
+				</li>
+				<li><b>Kale and Egg Salad</b>
+					<ul>
+						<li>Boil 2 eggs</li>
+						<li>just dip the chopped kale into the hot water (after boiling the eggs) for 1-2 minutes</li>
+						<li>Drain water from the kale and dice the boiled eggs and mix kale with the eggs</li>
+						<li>Add chopped strawberries, cottage cheese, and chopped dry plums</li>
+						<li>Add sliced olives and mix all the ingredients</li>
+						<li>Eat as is! Can add salt and pepper as desired</li>
+					</ul>
+				</li>				
+			</ol>
+		</div>
+		<div bind-unsafe-html="post.postcontent"></div>
+		<hr/>
+		<div id="extra" ng-bind-html="post.extra"></div>
+		<div id="labels">
+			<span ng-repeat="x in post.labels" class="label {{(x.class) || 'label-default'}}">{{x.label}}</span>
+		</div>
+	</div>
+</div>
