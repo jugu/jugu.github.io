@@ -263,7 +263,7 @@
 			"id":"17",
 			"name":"20-27 March 2016",
 			"alias":"First Week after Spring Break",
-			"date":"20-27 March 2016",
+			"date":"27 March 2016",
 			"link":"post/20160326.html",
 			"minutes":["Finished Visualization homework - Consisted of Cluster analysis using PCA, MDS, IsoMap",
 					  "Finished Compilers homework for builing Abstract Syntax tree for the Decaf Language",
@@ -274,6 +274,22 @@
 			"postcontent":"",
 			"extra":"",
 			"labels":[{"label":"Back to routine","class":"label-primary"}					  
+					 ]
+		},
+		{
+			"id":"18",
+			"name":"28 March - 08 April 2016",
+			"alias":"Long gap",
+			"date":"08 April 2016",
+			"link":"post/basic.html",
+			"minutes":["Visualized volumetric data using ImageVis software. Created Isosurface images and also created images using manually rendered transfer function",
+					  "Developed a Type Checker for Decaf language as part of Compilers Course",
+					  "Learned about B-epsilon trees which improves insert/update rates and also gives near optimal query performance",
+					  "Learned about Intermediate code generation and Control flows in Compilers class"					  
+					  ],
+			"postcontent":"<a href='http://www.sci.utah.edu/software/imagevis3d.html'>imagevis</a><br/><div><h4>Cottage Cheese Snack</h4><p><ul><li>Put 4-5 spoonful of cottage cheese in a bowl</li><li>Mix in 1 spoon of peanut butter(prefer natural)</li><li>Add 2-3 drops of honey</li><li>Add 6-7 almonds(roasted)</li><li>Add chocolate morsels(optional)</li></ul></p></div>",
+			"extra":"",
+			"labels":[{"label":"college rigor","class":"label-primary"}					  
 					 ]
 		}
 		
