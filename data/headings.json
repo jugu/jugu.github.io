@@ -3,7 +3,7 @@
 			 {"name":"Mini Diary", "source":"posts.html"},
 			 {"name":"stuff", "source":"works.html"}
 			],
- "status":"<b>[14 March 2016]</b> I am a first year master's student (joined Fall 2015) at <a href=\"http://www.stonybrook.edu/\">Stony Brook University </a> enrolled in the <a href=\"https://www.cs.stonybrook.edu/\">Computer Science</a> program. I have 6 years of full stack software product development experience using Java/J2EE based web technologies.<br/><b><i>I am actively looking for internship during summer 2016</i></b>",
+ "status":"<b>[09 April 2016]</b> I am a first year master's student (joined Fall 2015) at <a href=\"http://www.stonybrook.edu/\">Stony Brook University </a> enrolled in the <a href=\"https://www.cs.stonybrook.edu/\">Computer Science</a> program. I have 6 years of full stack software product development experience using Java/J2EE based web technologies.<br/><b><i>I am actively looking for internship during summer 2016</i></b>",
  
  "knowsabout":"Retail Workforce Management software, Product Development, Requirement Analysis, Technical Specification, Development Estimates, Implementation, Quality Assurance Testing, Full Stack Development, Agile Technologies",
  
@@ -285,11 +285,31 @@
 			"minutes":["Visualized volumetric data using ImageVis software. Created Isosurface images and also created images using manually rendered transfer function",
 					  "Developed a Type Checker for Decaf language as part of Compilers Course",
 					  "Learned about B-epsilon trees which improves insert/update rates and also gives near optimal query performance",
-					  "Learned about Intermediate code generation and Control flows in Compilers class"					  
+					  "Learned about Intermediate code generation and Control flows in Compilers class"				  
 					  ],
 			"postcontent":"<a href='http://www.sci.utah.edu/software/imagevis3d.html'>imagevis</a><br/><div><h4>Cottage Cheese Snack</h4><p><ul><li>Put 4-5 spoonful of cottage cheese in a bowl</li><li>Mix in 1 spoon of peanut butter(prefer natural)</li><li>Add 2-3 drops of honey</li><li>Add 6-7 almonds(roasted)</li><li>Add chocolate morsels(optional)</li></ul></p></div>",
 			"extra":"",
 			"labels":[{"label":"college rigor","class":"label-primary"}					  
+					 ]
+		},
+		{
+			"id":"19",
+			"name":"09 - 17 April 2016",
+			"alias":"Another Long Gap",
+			"date":"17 April 2016",
+			"link":"post/basic.html",
+			"minutes":["Learned about narrative visualization",
+					  "Wrote crawlers and text processing functions in python as part of the Advanced Project.",
+					  "The crawlers mined drugs.com website to scrape side effects of drugs",
+					  "Learned about LSM (Log Structured Merge) trees and their amortized analysis. LSM trees are used in HBase, LevelDB, Cassandra",
+					  "In Compilers course learned about Liveness.",
+					  "Attented few interviews for summer internships. Fingers crossed!",
+					  "Started jogging and exercising around my apartment. Hope it continues"
+					  ],
+			"postcontent":"<div>Attended a couple of Facutly Candidate Talks and Guest Lectures:<ul><li><a href = \"http://people.csail.mit.edu/smweinberg/\">Matt Weinberg</a>: Algorithms for Strategic agents</li><li><a href=\"http://web.stanford.edu/~alahi/\">Alexandre Alahi</a>: Towards Socially-aware Artificial Intelligence: Human Behavior Understanding at Scale</li><li><a href=\"http://www.public.asu.edu/~huanliu/\">Dr.Huan Liu</a>: The Good, the Bad and the Ugly: Uncovering Novel Opportunities of Data Science</li><li><a href=\"https://people.csail.mit.edu/indyk/\">Dr. Piotr Indyk</a>: Beyond P vs. NP: Quadratic-Time Hardness of Sequence Alignment Problems</li></ul></div><div><h4>Sweet Potato and Flattened Rice Dish</h4><p><ul><li>Rinse 1.5 cup of flattened rice and spread it on a plate with paper towel.</li><li>Roast peanuts (handful) in a pan till they become brownish. Keep Aside</li><li>Chop 1 medium sized onion</li><li>Peel and chop 1 sweet potato</li><li>In a medium heated pan, add few drops of olive oil</li><li>To the pan, add mustard seeds, cumin seeds, whole pepper(2-3), cloves(1) and dry red chilli pieces</li><li>Saute and then add chopped onions and salt</li><li>Fry till golden, and then add chopped sweet potato</li><li>Now fry till the potato changes color slightly.</li><li>Now add turmeric powder, and add in the flattened rice.</li><li>Mix well to get uniform color</li><li>Switch of the stove and add the roasted peanuts.</li><li>Adjust salt and spice level accordingly.</li><li>Serve hot and enjoy with a glass of 100% fruit juice</li></ul></p></div>",
+			"extra":"",
+			"labels":[{"label":"busy schedule ","class":"label-primary"},
+					  {"label":"a gift of health "}			
 					 ]
 		}
 		
