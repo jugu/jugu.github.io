@@ -1,11 +1,9 @@
 <div width="100%">
 	<h1>Jugu Dannie Sundar</h1>
-	<div style='background-color:lightblue;font-weight:bold'>Status</div>
-	<div>
+	<div class='title status'>Status</div>
 		<p ng-bind-html="site.status">
 		</p>
-	</div>		
-	<div style='background-color:lightblue;font-weight:bold'>Skills</div>	
+	<div class='title skills'>Skills</div>	
 	<div id="skill" align='center'>
 		<script>
 			var margin = {top: 20, right: 20, bottom: 100, left: 100},
@@ -81,7 +79,7 @@
 			});
 		</script>
 	</div>	
-	<div style="background-color:lightblue;font-weight:bold">
+	<div class="title knows">
 		Knows about
 	</div>
 	<p ng-bind="site.knowsabout">

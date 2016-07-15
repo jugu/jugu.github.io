@@ -71,6 +71,17 @@ body {
   }
 }
 
+div .title{
+	background-color:lightblue;
+	font-weight:bold;
+	font-size:25px;
+}
+
+div .title + p{	
+	font-family:arial;
+	font-size: 20px;
+}
+
 .bar:hover {
 	fill: brown;
 }
