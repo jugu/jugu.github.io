@@ -15,11 +15,47 @@
 			}
             .container {
                 width:100%
+            }            
+            .menuposts {
+                display:none; 
+                position:fixed; 
+                top:50px; 
+                left:0;
+                border:1px solid royalblue; 
+                width:20px; 
+                height: 30px;
+                padding:2px; 
+                color: white;
+                cursor: pointer;
+                z-index: 10;
+                background-color: royalblue;
             }
+            .menuposts:hover {
+                border-color:blueviolet;
+                opacity: 0.5;
+                background-color:blueviolet;
+            }
+            .posts {
+                display:block;
+                margin-top: 20px;
+                height: 600px;
+                overflow:auto;
+            }
+            @media (max-width: 767px) {
+                .menuposts {
+                    display: block;
+                    top: 50%;
+                    right: 0;
+                }
+                .posts {
+                    display:none;
+                }
+            }            
+            
 		</style>
 	</head>
-	<body style="margin:0px">	
-		<div id="maindiv" class="container" ng-app="app" ng-controller="controller">
+	<body style="margin:0px; width: 100%; height: 100%">     
+		<div id="maindiv" class="container" ng-app="app" ng-controller="controller">            
 			<nav class="navbar navbar-default navbar-fixed-top">
 				<div class="navbar-header">
 					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -180,6 +216,8 @@
 						.success(function(data) {							
 							$scope.posthtml = data;	
 							$scope.post = post;
+                            if ($(".menuposts").css("display") === 'block')
+                                $('.posts').hide('drop', {direction: 'left'}, 150)                                
 						})
 						.error(function(data,status,error,config){
 							$scope.error = [{heading:"Error",description:"Could not load post"}];
@@ -193,7 +231,17 @@
 				if( $(e.target).is('a') && $(e.target).attr('class') != 'dropdown-toggle' ) {
 					$(this).collapse('hide');
 				}
-			});			
+			});	
+            
+            $( window ).resize(function() {
+                if ($(".menuposts").css("display") === 'none')  
+                    $('.posts').show();                
+            });
+            
+            $(document).on('click', '.menuposts', function() {
+                //$(".posts").slideToggle();
+                $('.posts').toggle('drop', {direction: 'left'}, 150)
+            })
 		</script>		
 	</body>
 </html>

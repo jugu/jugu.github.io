@@ -1,11 +1,12 @@
+<div class="menuposts">>></div>
 <div class="row">
-	<div class="col-sm-2">
+	<div class="col-sm-2 posts">
 		<ul class="nav nav-pills nav-stacked">
 			<li ng-repeat="x in site.posts| orderBy:'-id'" ng-class="{'active': x.id == activePostId}"><a href="#" ng-click="loadpost(x.id)">{{x.name}}</a></li>
 		</ul>
 	</div>
 	<div class="col-sm-10"  bind-unsafe-html="posthtml">
-	</div>
+	</div>    
 	<script>
 		var scope = angular.element($("#maindiv")).scope();
 		/*scope.$apply(function(){
