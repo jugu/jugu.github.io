@@ -36,6 +36,8 @@ body {
 }
 .navbar-default .navbar-toggle {
   border-color: #ffcc33;
+  float: left;
+  margin-left: 10px;
 }
 .navbar-default .navbar-toggle:hover,
 .navbar-default .navbar-toggle:focus {
