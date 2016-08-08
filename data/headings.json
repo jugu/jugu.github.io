@@ -11,17 +11,22 @@
  "projects":[
         {
             "id" : "1",
+            "name" : "Youtube Visualization",
+            "alias" : "Youtube Data Visualization",
+            "link" : "project/youtube-data-visualization.html"
+        },   
+        {
+            "id" : "2",
             "name" : "Medical Rule Builder",
             "alias" : "Medical Rule Builder",
             "link" : "project/medical-rule-builder.html"
-        },
+        },        
         {
-            "id" : "2",
-            "name" : "Youtube Data Visualization",
-            "alias" : "Youtube Data Visualization",
-            "link" : "project/youtube-data-visualization.html"
-        }
-     
+            "id" : "3",
+            "name" : "Adverse Drug Events",
+            "alias" : "Adverse Drug Events",
+            "link" : "project/adverse-drug-events.html"
+        }     
  ],
  
  "works":[
