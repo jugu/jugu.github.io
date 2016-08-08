@@ -1,0 +1,15 @@
+<div class="menuprojects">>></div>
+<div class="row">
+	<div class="col-sm-2 projects">
+		<ul class="nav nav-pills nav-stacked">
+			<li ng-repeat="x in site.projects| orderBy:'-id'" ng-class="{'active': x.id == activeProjectId}"><a href="#" ng-click="loadproject(x.id)">{{x.name}}</a></li>
+		</ul>
+	</div>
+	<div class="col-sm-10 projectdata"  bind-unsafe-html="projecthtml">
+	</div>    
+	<script>
+		var scope = angular.element($("#maindiv")).scope();
+		var activeproject = scope.activeProjectId;
+		scope.loadproject(activeproject)
+	</script>
+</div>

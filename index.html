@@ -30,12 +30,40 @@
                 z-index: 10;
                 background-color: royalblue;
             }
+            
             .menuposts:hover {
                 border-color:blueviolet;
                 opacity: 0.5;
                 background-color:blueviolet;
             }
+            
+            .menuprojects {
+                display:none; 
+                position:fixed; 
+                top:50px; 
+                left:0;
+                border:1px solid royalblue; 
+                width:20px; 
+                height: 30px;
+                padding:2px; 
+                color: white;
+                cursor: pointer;
+                z-index: 10;
+                background-color: royalblue;
+            }
+            
+            .menuprojects:hover {
+                border-color:blueviolet;
+                opacity: 0.5;
+                background-color:blueviolet;
+            }
+            
             .posts {
+                display:block;
+                margin-top: 20px;
+                overflow:auto;
+            }
+            .projects {
                 display:block;
                 margin-top: 20px;
                 overflow:auto;
@@ -47,6 +75,14 @@
                     right: 0;
                 }
                 .posts {
+                    display:none;
+                }
+                .menuprojects {
+                    display: block;
+                    top: 50%;
+                    right: 0;
+                }
+                .projects {
                     display:none;
                 }
             }            
@@ -74,7 +110,7 @@
 				<div class="col-sm-10">					
 					<div id="contentdiv" bind-unsafe-html="content"></div>
 				</div>
-				<div class="col-sm-2">
+				<div class="col-sm-2 myself">
 					<div style='background-color:lightgray;color:white' align='middle'>Social networks</div>
 					<div align='middle'>
 						<a href="https://www.facebook.com/Jugu.Dannie" title="Jugu Dannie Sundar" target="_blank"><img class="img socialLink" src="https://badge.facebook.com/badge/500689165.9298.819076048.png" alt="" /></a>						
@@ -170,6 +206,7 @@
 							$scope.site=data;
 							$scope.activePostId = $scope.site.posts[$scope.site.posts.length - 1].id;
 							$scope.activeWorkId = $scope.site.works[$scope.site.works.length - 1].id;
+                            $scope.activeProjectId = $scope.site.projects[$scope.site.projects.length - 1].id;
 						})
 						.error(function(data,status,error,config){
 							$scope.error = [{heading:"Error",description:"Could not load headings"}];
@@ -197,6 +234,34 @@
 							$scope.error = [{heading:"Error",description:"Could not load work"}];
 						});
 				}
+                $scope.loadproject = function(id) {								
+					$scope.activeProjectId = id;
+					var projectlink = '';
+					var length = $scope.site.projects.length;
+					var projects = $scope.site.projects;
+					for (var t = 0; t < length;t++)
+					{
+						if (projects[t].id == id)
+						{
+							project = projects[t];
+							projectlink = projects[t].link;
+							break;
+						}
+					}
+					$http.get(projectlink)
+						.success(function(data) {							
+							$scope.projecthtml = data;	
+							$scope.project = project;
+                            if ($(".menuprojects").css("display") === 'block') {
+                                $('.projects').hide('drop', {direction: 'left'}, 150);
+                                $(".projectdata").show();
+                                $(".myself").show();
+                            }
+						})
+						.error(function(data,status,error,config){
+							$scope.error = [{heading:"Error",description:"Could not load project"}];
+						});
+				}
 				$scope.loadpost = function(id) {								
 					$scope.activePostId = id;
 					var postlink = '';
@@ -215,8 +280,11 @@
 						.success(function(data) {							
 							$scope.posthtml = data;	
 							$scope.post = post;
-                            if ($(".menuposts").css("display") === 'block')
-                                $('.posts').hide('drop', {direction: 'left'}, 150)                                
+                            if ($(".menuposts").css("display") === 'block') {
+                                $('.posts').hide('drop', {direction: 'left'}, 150);
+                                $(".postdata").show();
+                                $(".myself").show();
+                            }
 						})
 						.error(function(data,status,error,config){
 							$scope.error = [{heading:"Error",description:"Could not load post"}];
@@ -234,13 +302,25 @@
             
             $( window ).resize(function() {
                 if ($(".menuposts").css("display") === 'none')  
-                    $('.posts').show();                
+                    $('.posts').show();    
+                if ($(".menuprojects").css("display") === 'none')  
+                    $('.projects').show();    
             });
             
             $(document).on('click', '.menuposts', function() {
                 //$(".posts").slideToggle();
-                $('.posts').toggle('drop', {direction: 'left'}, 150)
+                $('.posts').toggle('drop', {direction: 'left'}, 150);
+                $(".postdata").hide();
+                $(".myself").hide();
+            });
+            
+            $(document).on('click', '.menuprojects', function() {
+                //$(".posts").slideToggle();
+                $('.projects').toggle('drop', {direction: 'left'}, 150);
+                $(".projectdata").hide();
+                $(".myself").hide();
             })
+            
 		</script>		
 	</body>
 </html>

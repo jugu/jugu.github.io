@@ -5,7 +5,7 @@
 			<li ng-repeat="x in site.posts| orderBy:'-id'" ng-class="{'active': x.id == activePostId}"><a href="#" ng-click="loadpost(x.id)">{{x.name}}</a></li>
 		</ul>
 	</div>
-	<div class="col-sm-10"  bind-unsafe-html="posthtml">
+	<div class="col-sm-10 postdata"  bind-unsafe-html="posthtml">
 	</div>    
 	<script>
 		var scope = angular.element($("#maindiv")).scope();
