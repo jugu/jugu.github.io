@@ -25,11 +25,12 @@
                 display:none; 
                 position:fixed; 
                 top:50px; 
-                left:0;
-                border:1px solid royalblue; 
+                left:0;                
                 width:20px; 
-                height: 30px;
-                padding:2px; 
+                height: 50px;
+                vertical-align: middle;
+                line-height: 50px;
+                padding:0px; 
                 color: white;
                 cursor: pointer;
                 z-index: 10;
@@ -45,12 +46,13 @@
             .menuprojects {
                 display:none; 
                 position:fixed; 
-                top:50px; 
+                top:50px;
                 left:0;
-                border:1px solid royalblue; 
                 width:20px; 
-                height: 30px;
-                padding:2px; 
+                height: 50px;
+                vertical-align: middle;
+                line-height: 50px;
+                padding:0px; 
                 color: white;
                 cursor: pointer;
                 z-index: 10;
@@ -112,7 +114,7 @@
 				</div>
 			</nav>	
 			<div class="row">				
-				<div class="col-sm-10" style="height: 100vh">					
+				<div class="col-sm-10" style="height: 100%">					
 					<div id="contentdiv" bind-unsafe-html="content" style="height: 100%"></div>
 				</div>
 				<div class="col-sm-2 myself">
@@ -196,7 +198,13 @@
 				$scope.myFunction = function(name, source) {					
 					$scope.activeItem = name;					
 					$http.get(source)
-						.success(function(data) {							
+						.success(function(data) {
+                            if (name === 'CV') {
+                                $("#contentdiv").parent().css({"height":"100vh"});
+                            }
+                            else {
+                                $("#contentdiv").parent().css({"height":"100%"});
+                            }
 							$scope.content=data;							
 						})
 						.error(function(data,status,error,config){
@@ -260,7 +268,6 @@
                             if ($(".menuprojects").css("display") === 'block') {
                                 $('.projects').hide('drop', {direction: 'left'}, 150);
                                 $(".projectdata").show();
-                                $(".myself").show();
                             }
 						})
 						.error(function(data,status,error,config){
@@ -288,7 +295,6 @@
                             if ($(".menuposts").css("display") === 'block') {
                                 $('.posts').hide('drop', {direction: 'left'}, 150);
                                 $(".postdata").show();
-                                $(".myself").show();
                             }
 						})
 						.error(function(data,status,error,config){
@@ -304,26 +310,37 @@
 					$(this).collapse('hide');
 				}
 			});	
-            
             $( window ).resize(function() {
-                if ($(".menuposts").css("display") === 'none')  
-                    $('.posts').show();    
-                if ($(".menuprojects").css("display") === 'none')  
-                    $('.projects').show();    
+                if ($(".menuposts").css("display") === 'none')   {
+                    $('.posts').show();
+                    $('.postdata').show();
+                }                
+                if ($(".menuprojects").css("display") === 'none')  {
+                    $('.projects').show();
+                    $('.projectdata').show();
+                }
             });
-            
             $(document).on('click', '.menuposts', function() {
                 //$(".posts").slideToggle();
                 $('.posts').toggle('drop', {direction: 'left'}, 150);
-                $(".postdata").hide();
-                $(".myself").hide();
+                if ($(".postdata").css("display") === 'none') {
+                    $('.postdata').show();
+                }
+                else {
+                    $(".postdata").hide();    
+                }
+                
             });
             
             $(document).on('click', '.menuprojects', function() {
                 //$(".posts").slideToggle();
                 $('.projects').toggle('drop', {direction: 'left'}, 150);
-                $(".projectdata").hide();
-                $(".myself").hide();
+                if ($(".projectdata").css("display") === 'none') {
+                    $('.projectdata').show();
+                }
+                else {
+                    $(".projectdata").hide();    
+                }
             })
             
 		</script>		
