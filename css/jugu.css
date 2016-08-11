@@ -1,6 +1,14 @@
 body {
 	padding-top:65px;
 }
+.backgroundapproach {
+	background-color:darkcyan;
+	color:white;
+	margin-left:0;
+	margin-right:0;
+	margin-top:10px;
+	margin-bottom:0;
+}
 .navbar-default {
   background-color: #006400;
   border-color: #ffcc33;
