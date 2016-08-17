@@ -346,6 +346,19 @@
 			"extra":"",
 			"labels":[{"label":"Summer","class":"label-primary"}					  
 					 ]
+		},
+		{
+			"id":"21",
+			"name":"17 Aug 2016",
+			"alias":"Fall Semester Awaits",
+			"date":"17 Aug 2016",
+			"link":"post/basic.html",
+			"minutes":[
+					  ],
+			"postcontent":"<h3>Summer is over</h3><p>Finally, the summer nears end. I am quite satisified with my personal growth during the summer. I lost around 18 pounds of body weight, coupled with regular exercise, weekly soccer games, and healthy diet. </p><p>I made considerable progress in my summer project and was able to deliver what was required of me.I found my interactions with the doctors (as part of the project) very insightful. Clearly, nowdays US doctors tend to spend lot of time interacting with computer based medical healthcare systems. And thus any tool that can reduce their time spent on these systems can improve their productivity and also give better healthcare experience to patients.</p><h3>Few Recipes I tried over summer</h3><p><b>Pan fried Tilapia</b></p><p><ul><li>Thaw frozen tilapia fish in refrigerator overnight</li><li>Heat oil (olive oil in my case) in pan</li><li>In a plate, transfer the thawed tilapia and season both sides with salt and pepper.</li><li>Once the pan is heated, put the seasoned fish into the pan</li><li>Let the fish cook for 4-5 minutes on the side</li><li>Meanwhile,chunk chop garlic cloves (4-5) and add to the pan </li><li>Chop a tomato and add to the pan</li><li>Chop couple of Jalapeno peppers and add to pan</li><li>Flip the fish over and cook for another 5 minutes</li><li>(Optional) Add 1 cup of frozen vegetables (broccolli/carrot/cauliflower)</li><li>Cut a lime and squeeze the juice into the pan</li><li>Enjoy the hot pan fried tilapia with plain water</li></ul></p><p><b>Tuna Out of Tuna</b></p><p><ul><li>Remove water from canned tuna (Chunked Light Tuna) after opening the can</li><li>Add 2-3 tablespoons of Mayonnaise</li><li>Chop tomato and add to the mix</li><li>Chop Jalapeno pepper and add to the mix</li><li>Add salt and pepper</li><li>Squeeze a lime into the mix</li><li>Mix all ingredients well and enjoy</li></ul></p><p><b>Black Beans (where have you been)</b></p><p><ul><li>Pour out contents of black bean can into a container</li><li>Rinse the container well to remove all the salt and foam in the beans</li><li>Chop tomato and add to mix.</li><li>Add pepper</li><li>Squeeze lime and enjoy!</li></ul></p>",
+			"extra":"",
+			"labels":[{"label":"Fall awaits","class":"label-primary"}					  
+					 ]
 		}
 		
 ]}
