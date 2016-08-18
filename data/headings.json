@@ -33,9 +33,15 @@
 
 		 {
 			"id":"1",
-			"name":"Compilers",
-			"alias":"Compilers",
+			"name":"Compilers (First/Follow)",
+			"alias":"Compilers (First/Follow)",
 			"link":"works/compilers.html" 
+		 },
+		 {
+			"id":"2",
+			"name":"Git commands",
+			"alias":"Git commands",
+			"link":"works/gitcommands.html" 
 		 }
 		 
 		 ],

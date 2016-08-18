@@ -1,0 +1,34 @@
+<div class="default_post">
+	<h1 class="{{(work.classalias) || 'default_postalias'}}">{{work.alias}}</h1>
+	<b class="default_postdate">{{work.date}}</b>
+	<hr/>
+	<div class="row">
+		<div class="col-sm-12">
+			<p><b>git init</b><br/> Initializes the git repository in the current project folder</p>
+			<p><b>git add < filename ></b><br/> Add the untracked file to the the staging area of git</p>
+			<p><b>git add .</b><br/> Add all the untracked files (modified/added) </p>
+			<p><b>git add --all</b><br/> Add all the untracked files (modified/added/DELETED)  </p>
+			<p><b>git status</b><br/> Check the status of the files (staged/unstaged)</p>			
+			<p><b>git commit -m "<custom message>"</b><br/> Commit the staged/tracked files to the git repository</p>
+			<p><b>git config --global user.email "<email>"</b><br/> Set default identity for the account</p>
+			<p><b>git config --global user.name "<name>"</b><br/> Set default identity for the account</p>
+			<p><b>git log</b><br/> Check the log for git commits related to the project</p>
+			<p><b>git reset HEAD < filename ><br/> Remove the file from the staged area back to the untracked area</b></p>
+			<p><b>git checkout < filename ></b><br/> Checkout the file from the previously committed version in git</p>
+			<p><b>git rm < filename ></b><br/> Remove file from git project folder and moves the file to staging area</p>
+			<p><b>git checkout < committed log hash ></b><br/> Checkout HEAD detached branch from a previously logged commit instance using the logged hashcode</p>
+			<p><b>git branch</b><br/> List the branches for the project and determine the active one</p>
+			<p><b>git branch < newbranch ></b><br/> Create a new branch using branch code (from the HEAD detached branch)
+			<p><b>git checkout < branchname ></b><br/> Checkout a branch from git to work on</p>
+			<p><b>git merge < branchname ></b><br/> Merge the changes in the listed branch into the current active branch</p>
+			<p><b>git branch -m < orig-branch-name > < new-branch-name ></b><br/> Rename the branch</p>
+			<p><b>git branch -D < branchname ></b><br/> Delete the branch</p>			
+			<p><b>git branch -a</b><br/> List all the branches in github project</p>
+			<p><b>git clone < git url ></b><br/> Clone the hosted repository</p>
+			<p><b>git checkout -b < customname > origin/< branchname ></b><br/> Checkout remote branch from Github and move it to custom branch and makes 
+			the custom branch active</p>
+			<p><b>git clone --mirror < repository link .git> .git</b><br/> Clone 
+			into a bare repository</p>
+			<p><b>git config --bool core.bare false</b><br/>Convert bare repository into regular repository</p>
+			<p><b>git reset --hard</b><br/>Grab everything inside .git folder and create all the branches present in it (Useful for downloading all github repository branches in one go)</p>
+			</div>
